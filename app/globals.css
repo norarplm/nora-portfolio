@@ -1,26 +1,134 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --cream: #f8f5f0;
+  --light-cream: #fdfbf7;
+  --dark-cream: #efe8dc;
+  --light-brown: #a89985;
+  --medium-brown: #8a7968;
+  --dark-brown: #5c4f3f;
+  --accent: #e6a4b4;
+  --accent-light: #f5d6dd;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cream);
+  color: var(--dark-brown);
+  scroll-behavior: smooth;
+}
+
+.bg-cream {
+  background-color: var(--cream);
+}
+
+.bg-light-cream {
+  background-color: var(--light-cream);
+}
+
+.bg-dark-cream {
+  background-color: var(--dark-cream);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.bg-accent-light {
+  background-color: var(--accent-light);
+}
+
+.text-dark-brown {
+  color: var(--dark-brown);
+}
+
+.text-medium-brown {
+  color: var(--medium-brown);
+}
+
+.text-light-brown {
+  color: var(--light-brown);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.border-accent {
+  border-color: var(--accent);
+}
+
+.section-container {
+  max-width: 72rem; /* This is equivalent to max-w-6xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 640px) {
+  .section-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.section-title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--dark-brown);
+  position: relative;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 0.25rem;
+  background-color: var(--accent);
+}
+
+@keyframes pawWalk {
+  0% {
+    transform: translate(-50px, -50px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate(calc(100vw + 50px), calc(100vh + 50px)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.paw-print {
+  position: absolute;
+  opacity: 0;
+  animation: pawWalk 15s linear infinite;
 }
