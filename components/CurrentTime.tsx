@@ -10,7 +10,7 @@ export default function CurrentTime() {
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      const options = {
+      const options: Intl.DateTimeFormatOptions = {
         hour: "numeric",
         minute: "numeric",
         second: "numeric",
