@@ -2,14 +2,23 @@
 
 import * as React from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import type { ThemeProviderProps } from "next-themes";
 
-export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+interface Props {
+  children: React.ReactNode;
+  attribute?: string;
+  defaultTheme?: string;
+  enableSystem?: boolean;
+}
+
+export function ThemeProvider({
+  children,
+  ...props
+}: Props) {
   return (
     <NextThemesProvider
-      attribute="class"       // This tells next-themes to add a 'class' to the <html> element
-      defaultTheme="system"   // You can change this to 'light' or 'dark' if you prefer
-      enableSystem            // Enables system preference detection
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
       {...props}
     >
       {children}
