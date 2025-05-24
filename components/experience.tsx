@@ -17,6 +17,16 @@ const experiences = [
       "Optimized game performance by refining Java code and ensuring compatibility with various Android devices, improving load times and reducing crashes.",
     ],
   },
+   {
+        title: "Software Engineering Intern",
+        company: "Roboffice Inc.",
+        period: "May 2023 - Aug 2023",
+        description: [
+          "Built C++ ROS2 nodes to handle sensor-based inference and robotic control in real-time applications.",
+          "Tuned inter-process message latency and improved hardware-in-the-loop performance for robotic systems.",
+          "Collaborated with embedded systems engineers and research teams to stabilize simulation/inference bridging for robotics workflows.",
+        ],
+      },
 ]
 
 export default function Experience() {
