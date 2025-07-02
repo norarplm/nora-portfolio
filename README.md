@@ -5,7 +5,6 @@ This is my personal portfolio website built with **HTML**, **CSS**, and **JavaSc
 ## 🚀 Live Demo
 
 👉 [View Site](https://norawang.ca)  
-_Deployed via GitHub Pages_
 
 ---
 
