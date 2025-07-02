@@ -16,6 +16,6 @@ _Deployed via GitHub Pages_
 - **JavaScript** – Interactive UI elements (nav, animations, form validation)  
 - **Tailwind CSS** – Utility-first styling  
 - **Nginx** (todo) – Reverse proxy setup for hosting elsewhere  
-- **GitHub Pages** – Static site hosting
+- **Vercel** – Static site hosting
 
 ---
