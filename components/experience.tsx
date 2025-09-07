@@ -6,6 +6,18 @@ import { Briefcase } from "lucide-react"
 
 const experiences = [
   {
+    title: "Full Stack Developer Co-op",
+    company: "Northbridge Financial Corporation",
+    period: "Sep 2025 - Dec 2025",
+    description: [
+      "Developing and maintaining internal web applications using PHP and modern front-end technologies to support digital insurance workflows.",
+      "Building and deploying containerized services using Docker for streamlined development, testing, and CI/CD integration.",
+      "Creating internal tools and automation scripts in Python to support QA, reporting, and DevOps processes.",
+      "Collaborating with cross-functional teams including UI/UX designers, business analysts, and QA engineers to deliver scalable and maintainable solutions.",
+      "Contributing to system documentation, code reviews, and Agile sprint planning to ensure quality and team alignment."
+    ],
+  },
+  {
     title: "Java Software Developer",
     company: "Avocado Mobile Inc.",
     period: "Sep 2023 - Apr 2024",

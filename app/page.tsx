@@ -16,13 +16,13 @@ import Footer from "@/components/footer";
 import CatPawsBackground from "@/components/cat-paws-background";
 import MobileNav from "@/components/mobile-nav";
 import CurrentTime from "@/components/CurrentTime";
+import FeaturedProject from "@/components/featured-project"; // ✅ Import here
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Check if we're on mobile
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -30,11 +30,9 @@ export default function Home() {
     checkMobile();
     window.addEventListener("resize", checkMobile);
 
-    // Preload click sound
     const clickSound = new Audio("/sounds/click.mp3");
     clickSound.preload = "auto";
 
-    // Simulate loading time
     const timer = setTimeout(() => {
       setLoading(false);
     }, 3000);
@@ -57,7 +55,6 @@ export default function Home() {
       </Head>
       <main className="relative min-h-screen bg-cream text-dark-brown">
         <CatPawsBackground />
-        {/* Desktop: Sidebar, SocialSidebar, and ScrollToTop */}
         {!isMobile && (
           <>
             <Sidebar />
@@ -65,15 +62,16 @@ export default function Home() {
             <ScrollToTop />
           </>
         )}
-        {/* Mobile: Mobile Navigation */}
         {isMobile && <MobileNav />}
-        {/* Fixed Current Time display */}
         <div className="fixed top-4 left-4 z-40">
           <CurrentTime />
         </div>
         <Hero />
         <About />
         <Experience />
+
+        <FeaturedProject /> {/* ✅ Inserted before Projects */}
+
         <Projects />
         <Skills />
         <Contact />
