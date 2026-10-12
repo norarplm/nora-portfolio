@@ -87,26 +87,6 @@ export default function Hero() {
                 >
                   Get in Touch
                 </motion.a>
-                <motion.a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    playClick()
-                    window.open("/resume.pdf", "_blank")
-                  }}
-                  whileHover={{
-                    scale: 1.05,
-                    backgroundColor: "#e6a4b4",
-                    color: "#ffffff",
-                    transition: { duration: 0.2 },
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-6 py-3 border border-accent text-accent rounded-full transition-all duration-200 shadow-md"
-                >
-                  View Resume
-                </motion.a>
               </div>
               
               {/* Social links for mobile */}
