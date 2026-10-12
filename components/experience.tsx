@@ -6,9 +6,9 @@ import { Briefcase } from "lucide-react"
 
 const experiences = [
   {
-    title: "Full Stack Developer Co-op",
+    title: "Full Stack Developer",
     company: "Northbridge Financial Corporation",
-    period: "Sep 2025 - Dec 2025",
+    period: "Sep 2025 - Present",
     description: [
       "Developing and maintaining internal web applications using PHP and modern front-end technologies to support digital insurance workflows.",
       "Building and deploying containerized services using Docker for streamlined development, testing, and CI/CD integration.",

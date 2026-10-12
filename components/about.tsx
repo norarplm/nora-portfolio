@@ -70,7 +70,7 @@ export default function About() {
               >
                 <h4 className="text-medium-brown font-medium">B.A. in Software Engineering</h4>
                 <p className="text-light-brown">University of Waterloo</p>
-                <p className="text-accent text-sm">2021 - 2026</p>
+                <p className="text-accent text-sm">2020 - 2026</p>
               </motion.div>
             </div>
             
